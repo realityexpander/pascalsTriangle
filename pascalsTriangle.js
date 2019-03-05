@@ -7,6 +7,8 @@ function pascalsTriangle (row) {
     for (var j = 0; j < i+1; j++) {            
       if (j === 0 || j === i) {
         elements[i][j] = 1;
+      }  else {
+        elements[i][j] = elements[i-1][j-1] + elements[i-1][j];
       }
     }
   }
